@@ -21,13 +21,14 @@ public class CentralDeControle {
        SmartTV tvDaSala = new SmartTV("Tv da sala", "matrix");
        Celular meuCelular = new Celular("iphone 15", "stairway to heaven", "çed zeppelin");
        RadioAutomotivo radioDoCarro = new RadioAutomotivo("Rádio do Carro", 98.9);
-
+        VideoGame game = new VideoGame("Console","Play 5");
        // USANDO O POLIMORFIMO;
        // o mesmo metodo 'apertarPlay' é chamdo com obejtos de tipos diferentes
        // e cada um se comporta de sua própria maneira.
        controle.apertarPlay(tvDaSala);
        controle.apertarPlay(meuCelular);
        controle.apertarPlay(radioDoCarro);
+       controle.apertarPlay(game);
 
 
        System.out.println("\n--- Demonstrativo com um Lista de Dispositivo ---");
