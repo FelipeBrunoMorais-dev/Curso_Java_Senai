@@ -1,8 +1,6 @@
-package Projeto_Gerente;
-
 import java.util.Scanner;
 
-public class contador {
+public class ConversorMoedaCompleto {
 
     // 1. Tabelas de referência (Dicionários)
     private static final String[] UNIDADES = {"", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"};
