@@ -50,6 +50,6 @@ public class Contato {
         if (partes.length == 3){
             return new Contato(partes[0], partes[1], partes[2]);
         }
-        return null // retorna null se a linha estiver mal formatada
+        return null; // retorna null se a linha estiver mal formatada
     }
 }

@@ -6,7 +6,6 @@ import java.util.List;
 
 
 public class AgendaManager {
-
     private final String nomeArquivo;
 
     public AgendaManager(String nomeArquivo) {
@@ -29,8 +28,13 @@ public class AgendaManager {
                     contatos.add(contato);
                 }
             }
+        }
+        catch (IOException e) {
+           System.err.println("Erro ao salval contatos no arquivo: " + e.getMessage());
+        }
+    return contatos;}
 
-            public void salvarContatos (List < Contato > contatos) {
+            public void salvarContatos(List<Contato> contatos) {
                 try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo))) {
                     for (Contato contato : contatos) {
                         writer.write(contato.paraLinhaArquivo());

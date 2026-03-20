@@ -28,7 +28,8 @@ public class MainAgenda {
                     case 4: removerContato();break;
                     case 5: System.out.println("salvando agenda e saindo...");break;
                     default:
-                        System.out.println("opção inválida!"); break;                                       }
+                        System.out.println("opção inválida!"); break;
+                }
             }else {
 
                 System.out.println(" por favor, digite um número");
@@ -98,5 +99,13 @@ public class MainAgenda {
         System.out.println("\n -- remover contato --");
         System.out.println("digite o nome exato do contato a ser removido: ");
         String nomeParaRemover = scanner.nextLine();
+
+        boolean removido = agenda.removeIf(contato -> contato.getNome().equalsIgnoreCase(nomeParaRemover));
+
+        if(removido){
+            System.out.println("Contato '" + nomeParaRemover + "'removido com sucesso");
+        }else {
+            System.out.println("nenhum contato com o nome '" + nomeParaRemover + "' foi encontrado");
+        }
     }
 }
