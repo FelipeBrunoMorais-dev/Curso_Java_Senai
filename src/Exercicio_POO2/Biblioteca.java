@@ -18,7 +18,16 @@ public class Biblioteca {
 
         System.out.println("*** Exibindo o acervo Completo ***");
 
+for (itemAcervo item : acervoCompleto){
+    System.out.println("Verificando item " + item.titulo + ": ");
 
+    if ( item instanceof Reservavel){
+        System.out.println("Esse item pode ser reservado.");
+        ((Reservavel) item). resevar(membro1);
+    } else {
+        System.out.println(" Este item não pode ser reservado");
+    }
+}
 
 
     }
